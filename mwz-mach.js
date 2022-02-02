@@ -6,7 +6,7 @@ $(document).ready(function() {
 		var fmData = new FormData();
 		fmData.append('purchase_code', $('input#element_10').val());
 		$.ajax({
-			url: 'https://form.janz.co/mailwizz.php',
+			url: 'https://forms.janz.co/mailwizz.php',
 			method: 'POST',
 			data: fmData, 
 			processData: false, 
