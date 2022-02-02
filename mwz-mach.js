@@ -4,10 +4,12 @@ $(document).ready(function () {
   //API will called after license field out of focus
   $("input#element_10").on("blur", function () {
     $license = $("input#element_10").val();
+    var formData = new FormData();
+		formData.append('purchase_code', $license);
     $.ajax({
       url: "https://forms.janz.co/mailwizz.php",
       method: "POST",
-      data: { 'purchase_code': $license },
+      data: formData,
       processData: false,
       contentType: false,
       success: function (json) {
