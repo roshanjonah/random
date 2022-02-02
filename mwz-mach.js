@@ -8,6 +8,7 @@ $(document).ready(function() {
 		$.ajax({
 			url: 'https://forms.janz.co/mailwizz.php',
 			method: 'POST',
+			dataType: 'json',
 			data: fmData,			
 			success: function(json){
 				console.log(json);
